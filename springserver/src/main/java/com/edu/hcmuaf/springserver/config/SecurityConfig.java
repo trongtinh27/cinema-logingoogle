@@ -35,7 +35,9 @@ public class SecurityConfig {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req -> req
-                                .requestMatchers("/login-goolge").permitAll()
+                                .requestMatchers("https://cinema-logingoogle-production.up.railway.app/login/oauth2/code/google").permitAll()
+                                .requestMatchers("http://cinema-logingoogle-production.up.railway.app/login/oauth2/code/google").permitAll()
+
 
 //                      Security
 //                        .requestMatchers(HttpMethod.GET,"/api/category", "api/locations/all").permitAll()
